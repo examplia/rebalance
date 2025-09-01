@@ -28,29 +28,29 @@
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="bg-white text-gray-800 flex flex-col min-h-screen font-sans">
+<body class="bg-slate-900 text-slate-100 flex flex-col min-h-screen font-sans">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-gray-200 sticky top-0 z-50">
-    <h1 class="text-xl font-bold text-gray-900">TC2 Rebalances</h1>
-    <ul class="flex gap-6 text-gray-600 text-sm">
-      <li><a href="#notes" class="hover:text-gray-900 transition">Rebalance Notes</a></li>
-      <li><a href="#discussion" class="hover:text-gray-900 transition">Discussion</a></li>
-      <li><a href="#discord" class="hover:text-gray-900 transition">Discord</a></li>
-      <li><a href="#credits" class="hover:text-gray-900 transition">Credits</a></li>
+  <nav class="flex items-center justify-between px-6 py-4 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+    <h1 class="text-xl font-bold text-sky-400">TC2 Rebalances</h1>
+    <ul class="flex gap-6 text-slate-300 text-sm">
+      <li><a href="#notes" class="hover:text-sky-400 transition">Rebalance Notes</a></li>
+      <li><a href="#discussion" class="hover:text-sky-400 transition">Discussion</a></li>
+      <li><a href="#discord" class="hover:text-sky-400 transition">Discord</a></li>
+      <li><a href="#credits" class="hover:text-sky-400 transition">Credits</a></li>
     </ul>
   </nav>
 
   <!-- Hero -->
-  <header class="w-full text-center py-16 bg-gray-100 border-b border-gray-200">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">Typical Colors 2 – Rebalances</h2>
-    <p class="mt-4 text-lg text-gray-600">Community-driven balance adjustments, always up to date</p>
+  <header class="w-full text-center py-16 bg-slate-800 shadow-md">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white">Typical Colors 2 – Rebalances</h2>
+    <p class="mt-4 text-lg text-slate-300">Community-driven balance adjustments, always up to date</p>
   </header>
 
   <!-- Google Doc -->
   <main id="notes" class="flex-grow flex flex-col items-center px-6 py-12">
-    <h3 class="text-2xl font-bold text-gray-900 mb-6">Live Rebalance Notes</h3>
-    <div class="w-full max-w-6xl h-[85vh] rounded-xl overflow-hidden shadow-lg border border-gray-200">
+    <h3 class="text-2xl font-bold text-sky-400 mb-6">Live Rebalance Notes</h3>
+    <div class="w-full max-w-6xl h-[85vh] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-white">
       <iframe 
         src="https://docs.google.com/document/d/1B0UHJK4Cz63E8k5ud9DdaukCnBdO9r5CWVh501xEIXY/preview" 
         class="w-full h-full border-0"
@@ -60,11 +60,11 @@
   </main>
 
   <!-- Discussion -->
-  <section id="discussion" class="px-6 py-12 bg-gray-50 border-t border-b border-gray-200">
+  <section id="discussion" class="px-6 py-12 bg-slate-800 shadow-inner">
     <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-2xl font-bold text-gray-900 mb-6">Join the Discussion</h3>
-      <p class="text-gray-600 mb-6">Talk about these rebalances with the community below.</p>
-      <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4">
+      <h3 class="text-2xl font-bold text-sky-400 mb-6">Join the Discussion</h3>
+      <p class="text-slate-300 mb-6">Talk about these rebalances with the community below.</p>
+      <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-700 p-4">
         <script src="https://giscus.app/client.js"
                 data-repo="examplia/rebalance"
                 data-repo-id="R_kgDOPoFSPw"
@@ -75,7 +75,7 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="bottom"
-                data-theme="light"
+                data-theme="dark"
                 data-lang="en"
                 crossorigin="anonymous"
                 async>
@@ -85,12 +85,12 @@
   </section>
 
   <!-- Discord Widget -->
-  <section id="discord" class="px-6 py-12">
+  <section id="discord" class="px-6 py-12 bg-slate-900">
     <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-2xl font-bold text-gray-900 mb-6">Join Our Discord</h3>
-      <p class="text-gray-600 mb-6">Chat directly with the TC2 rebalance community.</p>
+      <h3 class="text-2xl font-bold text-sky-400 mb-6">Join Our Discord</h3>
+      <p class="text-slate-300 mb-6">Chat directly with the TC2 rebalance community.</p>
       <div class="flex justify-center">
-        <iframe src="https://discord.com/widget?id=1403507827586236416&theme=light" 
+        <iframe src="https://discord.com/widget?id=1403507827586236416&theme=dark" 
                 width="350" 
                 height="500" 
                 allowtransparency="true" 
@@ -102,9 +102,9 @@
   </section>
 
   <!-- Footer -->
-  <footer id="credits" class="bg-gray-100 text-gray-500 text-center py-6 text-sm border-t border-gray-200">
+  <footer id="credits" class="bg-slate-950 text-slate-400 text-center py-6 text-sm space-y-1 mt-auto">
     <p>&copy; 2025 TC2 Community Rebalance Project</p>
-    <p>Credits: Document created by <span class="text-gray-700 font-semibold">@snazzygold</span> on Discord</p>
+    <p>Credits: Document created by <span class="text-slate-200 font-semibold">@snazzygold</span> on Discord</p>
   </footer>
 
 </body>
