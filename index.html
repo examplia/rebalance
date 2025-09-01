@@ -1,99 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TC2 Rebalances</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <!-- Smooth scrolling -->
-  <style>
-    :root { color-scheme: dark; }
-    html { scroll-behavior: smooth; }
-    /* Glass + glow helpers */
-    .glass { background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)); box-shadow: 0 10px 30px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    .glow:hover { box-shadow: 0 12px 40px rgba(56,189,248,.35), inset 0 0 0 9999px rgba(255,255,255,.02); transform: translateY(-1px) scale(1.01); }
-    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: translateY(0) } }
-    .animate-fadeIn { animation: fadeIn 1s ease-out both; }
-    .animate-fadeUp { animation: fadeUp 1s ease-out both; }
-    /* Soft animated gradient bg */
-    .bg-aurora { position: fixed; inset: 0; z-index: -1; background: radial-gradient(1200px 800px at 10% 10%, rgba(139,92,246,.35), transparent 60%), radial-gradient(1000px 700px at 90% 20%, rgba(14,165,233,.25), transparent 60%), radial-gradient(900px 900px at 50% 90%, rgba(168,85,247,.20), transparent 60%), linear-gradient(180deg, #0b1220 0%, #0a1020 100%); filter: blur(0.5px); }
-  </style>
-
-  <!-- Social embeds -->
+  <!-- Open Graph -->
   <meta property="og:title" content="TC2 Rebalances" />
-  <meta property="og:description" content="Live, community-driven Typical Colors 2 rebalance notes. Join the discussion and the Discord." />
+  <meta property="og:description" content="All live rebalances for Typical Colors 2." />
   <meta property="og:url" content="https://rebalances.typicalcolors.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TC2 Rebalances" />
-  <meta name="twitter:description" content="Live, community-driven Typical Colors 2 rebalance notes." />
-  <meta name="twitter:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png" />
+  <meta property="og:image" content="https://rebalances.typicalcolors.com/discord_icon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TC2 Rebalances">
+  <meta name="twitter:description" content="All live rebalances for Typical Colors 2.">
+  <meta name="twitter:image" content="https://rebalances.typicalcolors.com/discord_icon.png">
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="min-h-screen text-slate-100">
-  <!-- animated background -->
-  <div class="bg-aurora"></div>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen font-sans">
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 glass backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="/discord_icon.png" alt="Site Icon" class="w-8 h-8 rounded-lg" />
-        <span class="text-lg font-semibold tracking-wide">TC2 Rebalances</span>
-      </div>
-      <ul class="hidden md:flex gap-6 text-slate-300 text-sm">
-        <li><a href="#notes" class="hover:text-sky-300 transition">Notes</a></li>
-        <li><a href="#discussion" class="hover:text-sky-300 transition">Discussion</a></li>
-        <li><a href="#discord" class="hover:text-sky-300 transition">Discord</a></li>
-        <li><a href="#credits" class="hover:text-sky-300 transition">Credits</a></li>
-      </ul>
-      <a href="#discord" class="md:hidden inline-block px-3 py-1.5 rounded-xl text-sm glass glow">Join Discord</a>
-    </div>
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-gray-200 sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-gray-900">TC2 Rebalances</h1>
+    <ul class="flex gap-6 text-gray-600 text-sm">
+      <li><a href="#notes" class="hover:text-gray-900 transition">Rebalance Notes</a></li>
+      <li><a href="#discussion" class="hover:text-gray-900 transition">Discussion</a></li>
+      <li><a href="#discord" class="hover:text-gray-900 transition">Discord</a></li>
+      <li><a href="#credits" class="hover:text-gray-900 transition">Credits</a></li>
+    </ul>
   </nav>
 
   <!-- Hero -->
-  <header class="max-w-7xl mx-auto px-6 pt-12 pb-10 animate-fadeUp">
-    <div class="glass rounded-3xl p-8 md:p-12 text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Typical Colors 2 — Rebalances</h1>
-      <p class="mt-4 text-slate-300 max-w-2xl mx-auto">Super-clean, modern patch notes with live discussion and a Discord widget. One long, readable page — no PDFs.</p>
-      <div class="mt-6 flex items-center justify-center gap-3">
-        <a href="#notes" class="glass glow px-5 py-2.5 rounded-2xl font-medium">Read Notes</a>
-        <a href="#discussion" class="glass glow px-5 py-2.5 rounded-2xl font-medium">Discuss</a>
-      </div>
-    </div>
+  <header class="w-full text-center py-16 bg-gray-100 border-b border-gray-200">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">Typical Colors 2 – Rebalances</h2>
+    <p class="mt-4 text-lg text-gray-600">Community-driven balance adjustments, always up to date</p>
   </header>
 
-  <!-- Live Patch Notes (Google Doc embed) -->
-  <section id="notes" class="max-w-7xl mx-auto px-6 pb-8 animate-fadeUp">
-    <div class="glass rounded-3xl p-4 md:p-6">
-      <div class="flex items-center justify-between px-2 py-2">
-        <h2 class="text-2xl md:text-3xl font-bold">Live Rebalance Notes</h2>
-        <div class="text-sm text-slate-400">Auto-updates from Google Docs</div>
-      </div>
-      <!--
-        We convert your edit link to a previewable URL automatically so it looks native and seamless.
-        If you later "Publish to the web" in Google Docs, you can paste the published URL instead.
-      -->
-      <div class="mt-4 rounded-2xl overflow-hidden border border-white/15">
-        <iframe id="gdoc-frame" title="TC2 Rebalances Doc" class="w-full" style="height: 85vh; border: 0; background: transparent"></iframe>
-      </div>
-      <div class="mt-3 text-xs text-slate-400 px-1">If the content doesn't load, make sure the Google Doc is set to <em>Anyone with the link can view</em>, or use <em>File → Share → Publish to web</em>.</div>
+  <!-- Google Doc -->
+  <main id="notes" class="flex-grow flex flex-col items-center px-6 py-12">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Live Rebalance Notes</h3>
+    <div class="w-full max-w-6xl h-[85vh] rounded-xl overflow-hidden shadow-lg border border-gray-200">
+      <iframe 
+        src="https://docs.google.com/document/d/1B0UHJK4Cz63E8k5ud9DdaukCnBdO9r5CWVh501xEIXY/preview" 
+        class="w-full h-full border-0"
+        allowfullscreen>
+      </iframe>
     </div>
-  </section>
+  </main>
 
-  <!-- Discussion (Giscus) -->
-  <section id="discussion" class="max-w-5xl mx-auto px-6 pb-8 animate-fadeUp">
-    <div class="glass rounded-3xl p-6">
-      <h3 class="text-2xl font-bold mb-4">Discussion</h3>
-      <p class="text-slate-300 mb-6">Share feedback and talk balance below. Uses GitHub Discussions via Giscus.</p>
-      <div class="rounded-xl overflow-hidden">
+  <!-- Discussion -->
+  <section id="discussion" class="px-6 py-12 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Join the Discussion</h3>
+      <p class="text-gray-600 mb-6">Talk about these rebalances with the community below.</p>
+      <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4">
         <script src="https://giscus.app/client.js"
                 data-repo="examplia/rebalance"
                 data-repo-id="R_kgDOPoFSPw"
@@ -104,7 +75,7 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="bottom"
-                data-theme="dark"
+                data-theme="light"
                 data-lang="en"
                 crossorigin="anonymous"
                 async>
@@ -113,49 +84,28 @@
     </div>
   </section>
 
-  <!-- Discord (official widget) -->
-  <section id="discord" class="max-w-5xl mx-auto px-6 pb-12 animate-fadeUp">
-    <div class="glass rounded-3xl p-6">
-      <div class="flex items-center gap-3 mb-4">
-        <img src="/discord_icon.png" alt="Discord Icon" class="w-10 h-10 rounded-xl" />
-        <h3 class="text-2xl font-bold">Join our Discord</h3>
-      </div>
-      <p class="text-slate-300 mb-6">Live server presence via the official Discord widget.</p>
+  <!-- Discord Widget -->
+  <section id="discord" class="px-6 py-12">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Join Our Discord</h3>
+      <p class="text-gray-600 mb-6">Chat directly with the TC2 rebalance community.</p>
       <div class="flex justify-center">
-        <iframe src="https://discord.com/widget?id=1403507827586236416&theme=dark"
-                width="350" height="500"
-                allowtransparency="true" frameborder="0"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                class="rounded-2xl border border-white/15"></iframe>
+        <iframe src="https://discord.com/widget?id=1403507827586236416&theme=light" 
+                width="350" 
+                height="500" 
+                allowtransparency="true" 
+                frameborder="0" 
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="credits" class="max-w-7xl mx-auto px-6 pb-12 animate-fadeUp">
-    <div class="glass rounded-3xl p-6 text-center text-sm text-slate-400">
-      <p>&copy; 2025 TC2 Community Rebalance Project · Built with ❤️</p>
-      <p>Credits: Document created by <span class="text-slate-200 font-semibold">@snazzygold</span> on Discord</p>
-    </div>
+  <footer id="credits" class="bg-gray-100 text-gray-500 text-center py-6 text-sm border-t border-gray-200">
+    <p>&copy; 2025 TC2 Community Rebalance Project</p>
+    <p>Credits: Document created by <span class="text-gray-700 font-semibold">@snazzygold</span> on Discord</p>
   </footer>
 
-  <!-- Boot script: set Google Doc URL -->
-  <script>
-    // Your Google Doc (edit) URL — provided by you
-    const GOOGLE_DOC_EDIT_URL = "https://docs.google.com/document/d/1B0UHJK4Cz63E8k5ud9DdaukCnBdO9r5CWVh501xEIXY/edit?usp=sharing";
-
-    // Convert edit URL to preview URL (works without exposing edit UI)
-    // e.g., /edit* → /preview
-    function toPreviewUrl(url) {
-      try {
-        return url.replace(/\/edit.*$/, "/preview");
-      } catch (e) {
-        return url; // fallback
-      }
-    }
-
-    const frame = document.getElementById("gdoc-frame");
-    frame.src = toPreviewUrl(GOOGLE_DOC_EDIT_URL);
-  </script>
 </body>
 </html>
