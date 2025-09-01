@@ -13,7 +13,7 @@
 
   <!-- Discord Embed (Open Graph) -->
   <meta property="og:title" content="TC2 Rebalances" />
-  <meta property="og:description" content="Explore the full Typical Colors 2 rebalances document." />
+  <meta property="og:description" content="Explore the full Typical Colors 2 rebalances document and join the discussion." />
   <meta property="og:url" content="https://rebalances.typicalcolors.com" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png" />
@@ -21,25 +21,63 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TC2 Rebalances">
-  <meta name="twitter:description" content="Explore the full Typical Colors 2 rebalances document.">
+  <meta name="twitter:description" content="Explore the full Typical Colors 2 rebalances document and join the discussion.">
   <meta name="twitter:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png">
 </head>
-<body class="bg-slate-900 text-slate-100 flex flex-col min-h-screen">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-sky-400 to-indigo-500 shadow-lg p-6 text-center">
-    <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Typical Colors 2 – Rebalances</h1>
-    <p class="text-slate-200 mt-2">Community-driven weapon balance changes</p>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+    <h1 class="text-xl font-bold text-sky-400">TC2 Rebalances</h1>
+    <ul class="flex gap-6 text-slate-300 text-sm">
+      <li><a href="#rebalances" class="hover:text-sky-400 transition">Rebalances</a></li>
+      <li><a href="#discussion" class="hover:text-sky-400 transition">Discussion</a></li>
+      <li><a href="#credits" class="hover:text-sky-400 transition">Credits</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative w-full h-64 md:h-80 lg:h-96 flex items-center justify-center overflow-hidden shadow-lg">
+    <img src="/tc2_rebalances_preview.png" alt="TC2 Rebalances" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">Typical Colors 2 – Rebalances</h2>
+      <p class="mt-3 text-lg text-slate-200">Community-driven balance adjustments</p>
+    </div>
   </header>
 
-  <!-- PDF Embed -->
-  <main class="flex-grow flex justify-center items-center p-4">
-    <div class="w-full max-w-7xl h-[90vh] rounded-2xl overflow-hidden shadow-2xl">
+  <!-- PDF Section -->
+  <main id="rebalances" class="flex-grow flex flex-col items-center p-6">
+    <h3 class="text-2xl font-bold text-sky-400 mb-4">Weapon Balance Document</h3>
+    <div class="w-full max-w-6xl h-[85vh] rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
       <embed src="/Typical%20Colors%202%20Rebalances.pdf" type="application/pdf" class="w-full h-full" />
     </div>
+    <a href="/Typical%20Colors%202%20Rebalances.pdf" download class="mt-4 inline-block bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-2 rounded-lg shadow-md transition">Download PDF</a>
   </main>
 
+  <!-- Discussion Section -->
+  <section id="discussion" class="bg-slate-900/80 backdrop-blur-md px-6 py-12 mt-12">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-sky-400 mb-6">Join the Discussion</h3>
+      <p class="text-slate-300 mb-6">Talk about these rebalances with the community below.</p>
+      <!-- Giscus Embed Placeholder -->
+      <div class="bg-slate-800 rounded-xl shadow-lg p-4">
+        <script src="https://giscus.app/client.js"
+          data-repo="examplia/rebalance"
+          data-repo-id="YOUR_REPO_ID"
+          data-category="General"
+          data-category-id="YOUR_CATEGORY_ID"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-theme="dark"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-slate-800 text-slate-400 text-center py-4 text-sm space-y-1">
+  <footer id="credits" class="bg-slate-950 text-slate-400 text-center py-6 text-sm space-y-1 mt-auto">
     <p>&copy; 2025 TC2 Community Rebalance Project · Built with ❤️</p>
     <p>Credits: Document created by <span class="text-slate-200 font-semibold">@snazzygold</span> on Discord</p>
   </footer>
