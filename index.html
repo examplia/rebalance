@@ -5,49 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TC2 Rebalances</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <!-- Discord Embed (Open Graph) -->
   <meta property="og:title" content="TC2 Rebalances" />
-  <meta property="og:description" content="Nothing here yet!" />
+  <meta property="og:description" content="View the full Typical Colors 2 rebalances document." />
   <meta property="og:url" content="https://rebalances.typicalcolors.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://typicalcolors.com/logo.png" /> <!-- replace with actual logo -->
+  <meta property="og:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TC2 Rebalances">
-  <meta name="twitter:description" content="Nothing here yet!">
-  <meta name="twitter:image" content="https://typicalcolors.com/logo.png"> <!-- replace -->
+  <meta name="twitter:description" content="View the full Typical Colors 2 rebalances document.">
+  <meta name="twitter:image" content="https://rebalances.typicalcolors.com/tc2_rebalances_preview.png">
 
   <style>
     body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      padding: 1rem;
+      text-align: center;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      color: #0f172a;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    main {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f8fafc;
+      padding: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      background: #1e293b;
+    }
+    footer {
       text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    p {
-      margin-top: 1rem;
-      font-size: 1.25rem;
-      color: #cbd5e1;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      background: #1e293b;
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Nothing here yet!</h1>
-    <p>Check back soon for TC2 rebalances.</p>
-  </div>
+  <header>
+    Typical Colors 2 – Rebalances
+  </header>
+  <main>
+    <iframe src="/Typical%20Colors%202%20Rebalances.pdf"></iframe>
+  </main>
+  <footer>
+    &copy; 2025 TC2 Community Rebalance Project
+  </footer>
 </body>
 </html>
